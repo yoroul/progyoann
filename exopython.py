@@ -164,7 +164,54 @@
 
 # multiplication(nombre)
 
-# exo 44 : boucle for et enumerate (pour une liste pour récupérer l'indice) ; même principe que items() pour les dico
-liste = ["Pierre", "Paul", "Marie"]
-for i, elt in enumerate(liste):
-    print(i, elt)
+# # exo 44 : boucle for et enumerate (pour une liste pour récupérer l'indice) ; même principe que items() pour les dico
+# liste = ["Pierre", "Paul", "Marie"]
+# for i, elt in enumerate(liste):
+#     print(i, elt)
+
+# # exo 45-46:
+
+# nombres = range(50)
+# nombres_pairs = [elt for elt in nombres if elt % 2 == 0]
+# print(nombres_pairs)
+
+# # exo 47:
+# nombre = 209812
+# maliste = [int(elt) for elt in str(nombre)]
+# print(sum(maliste))
+
+# # exo 48 : replace sur une chaine de caractère
+# liste = ["Pierre", "Marie", "Julie", "Adrien", "Julie"]
+# nom_a_chercher = "Julie"
+# nouveau_nom = "Julien"
+# print([elt.replace(nom_a_chercher,nouveau_nom) for elt in liste])
+
+# # exo 49:
+# nombres = [1, 2, 2, 3, 4, 5, 5, 5, 6, 7, 7, 8, 9, 10]
+# print(set(nombres))
+# newlist = []
+# for elt in nombres:
+#     if elt not in newlist:
+#         newlist.append(elt)
+
+# print(newlist)
+
+# exo 51 : les dictionnaires et formats
+employes = {}
+liste = [10, 2329, 5, "Pierre", 203, "Marie", 867, "Adrien"]
+i = 0
+for elt in liste:
+    if type(elt) is str:
+        i+=1
+        ident = f"id-0{i}"
+        employes[ident] = elt
+
+print(employes)
+
+i = 1
+for elt in liste:
+    if not str(elt).isdigit():
+        employes["id-{:02d}".format(i)]
+        i+=1
+
+print(employes)
