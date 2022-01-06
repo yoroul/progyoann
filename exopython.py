@@ -196,22 +196,61 @@
 
 # print(newlist)
 
-# exo 51 : les dictionnaires et formats
-employes = {}
-liste = [10, 2329, 5, "Pierre", 203, "Marie", 867, "Adrien"]
-i = 0
-for elt in liste:
-    if type(elt) is str:
-        i+=1
-        ident = f"id-0{i}"
-        employes[ident] = elt
+# # exo 51 : les dictionnaires et formats
+# employes = {}
+# liste = [10, 2329, 5, "Pierre", 203, "Marie", 867, "Adrien"]
+# i = 0
+# for elt in liste:
+#     if type(elt) is str:
+#         i+=1
+#         ident = f"id-0{i}"
+#         employes[ident] = elt
 
-print(employes)
+# print(employes)
 
-i = 1
-for elt in liste:
-    if not str(elt).isdigit():
-        employes["id-{:02d}".format(i)]
-        i+=1
+# i = 1
+# for elt in liste:
+#     if not str(elt).isdigit():
+#         employes["id-{:02d}".format(i)]
+#         i+=1
 
-print(employes)
+# print(employes)
+
+# # exo 52 :
+# import string
+# alphabet = string.ascii_lowercase
+# print({k+1 : v for k, v in enumerate(alphabet)})
+
+# exo 53 : recréation de la fonction len
+# def longueur(variable):
+#     i = 0
+#     for elt in variable:
+#         i+=1
+#     return i
+
+# print(longueur("bonjour"))
+
+# # exo 54
+
+# # Longueur maximale à afficher
+# n = 8
+# symbole = '*'
+# for i in range(n+1):
+#     print(symbole*i)
+#     if i == 8:
+#         for k in range(1,n):
+#             print(symbole*(i-k))
+
+# # OU
+
+# nombres = list(range(1, n+1)) + list(range(n-1, 0, -1))
+# print(nombres)
+# for i in nombres:
+#     print(symbole*i)
+
+# exo 55:
+symbole = "$"
+taille = 10
+for k in range(taille+1):
+    i = taille-k
+    print(" "*i+(symbole+" ")*k)
