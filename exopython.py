@@ -248,9 +248,38 @@
 # for i in nombres:
 #     print(symbole*i)
 
-# exo 55:
-symbole = "$"
-taille = 10
-for k in range(taille+1):
-    i = taille-k
-    print(" "*i+(symbole+" ")*k)
+# exo 55: créer une pyramide symboles
+# symbole = "$"
+# taille = 10
+# for k in range(taille+1):
+#     i = taille-k
+#     print(" "*i+(symbole+" ")*k)
+
+# # exo 56 : les f-string et le padding
+# texte = "Bonjour Udemy"
+# j=0
+# for i in range(0,15):
+#     j= i-1
+#     # print(j)
+#     if i == 0:
+#         print('-'*13)
+#     elif j < len(texte):
+#             print('|'+' '*5+texte[j]+' '*5+'|')
+#     elif i == 14:
+#         print('-'*13)
+
+# # OU
+
+# size = len(texte)
+ 
+# symbol = "-"
+# symbol2 = "|"
+ 
+# print(symbol * size)
+ 
+# for lettre in texte:
+#     # ici le ^ permet de dire à python que l'on veut insérer entre symbol 2 et symbol2 la "lettre", mais avec un "padding" de longueur size-2
+#     # le "padding" sert à insérer des blancs
+#     print(f"{symbol2}{lettre:^{size - 2}}{symbol2}")
+ 
+# print(symbol * size)
