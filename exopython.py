@@ -250,6 +250,7 @@
 
 # exo 55: créer une pyramide symboles
 # symbole = "$"
+
 # taille = 10
 # for k in range(taille+1):
 #     i = taille-k
@@ -283,3 +284,21 @@
 #     print(f"{symbol2}{lettre:^{size - 2}}{symbol2}")
  
 # print(symbol * size)
+
+# exo 57
+nombre = 52039480394023
+
+def ajout_separateur(nombre):
+    # nombre à l'envers
+    nombre = str(nombre)[::-1]
+    print(nombre, len(nombre))
+    resultat = ""
+ 
+    for i, chiffre in enumerate(nombre, 1):
+        print(chiffre, i, i%3)
+        chiffre_formatte = chiffre + "," if i % 3 == 0 and i != len(nombre) else chiffre
+        resultat += chiffre_formatte
+ 
+    return resultat[::-1]
+
+print(ajout_separateur(nombre))
